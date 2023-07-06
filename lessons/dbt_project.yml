@@ -39,3 +39,8 @@ models:
     +persist_docs:
       relation: true
       columns: true
+    +hours_to_expiration: 168 # deletes table after the mentioned hours
+
+tests:
+  lessons:
+    +severity: warn #sets the default test behavioural. Warn will just
