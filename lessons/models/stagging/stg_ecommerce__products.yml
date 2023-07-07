@@ -5,7 +5,7 @@ models:
     description: "Table of products on the online store"
     columns:
       - name: product_id
-        description: ""
+        description: "Primary Key"
         tests:
           - not_null
           - unique
