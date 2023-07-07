@@ -23,7 +23,3 @@ WHERE primary_key IS NULL
 	OR occurrences > 1
 
 {% endtest %}
-
-{% test primary_key(model, column_name)%}
-
-{% endtest %}
