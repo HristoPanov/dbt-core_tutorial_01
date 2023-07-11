@@ -15,6 +15,7 @@ WITH source AS (
 	SELECT
 	*
 	FROM {{ source('thelook_ecommerce', 'events') }}
+	--where created_at <= '2023-07-01'
 )
 
 SELECT
