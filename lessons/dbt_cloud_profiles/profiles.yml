@@ -1,0 +1,33 @@
+lessons:
+  target: production
+  outputs:
+    dev:
+      dataset: dbt_hpanov
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: stalwart-topic-391211
+      threads: 60
+      type: bigquery
+    testing:
+      dataset: dbt_hpanov_test
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: stalwart-topic-391211
+      threads: 60
+      type: bigquery
+    production:
+      dataset: dbt_hpanov_production
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: stalwart-topic-391211
+      threads: 60
+      type: bigquery
