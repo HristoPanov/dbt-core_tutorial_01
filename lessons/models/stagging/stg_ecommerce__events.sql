@@ -15,7 +15,6 @@ WITH source AS (
 	SELECT
 	*
 	FROM {{ source('thelook_ecommerce', 'events') }}
-	--where created_at <= '2023-07-01'
 )
 
 SELECT
@@ -34,8 +33,6 @@ SELECT
 	event_type,
 	{# Look in macros/macro_get_brand_name.sql to see how this function is defined #}
 	{{ target.schema }}.get_brand_name(uri) AS brand_name
-
-
 FROM source
 
 {# Only runs this filter on an incremental run #}
