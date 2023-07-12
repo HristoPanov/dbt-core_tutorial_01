@@ -43,7 +43,11 @@ models:
     +persist_docs:
       relation: true
       columns: true
-    +hours_to_expiration: 168 # deletes table after the mentioned hours
+    +hours_to_expiration: | #168
+      {% if target.name =='testing' %} 1
+      {% elif target.name =='production' %} 1
+      {% else %} 48
+      {% endif %}
     intermediate:
       tags: ['my_tag',"my_other_tag"]
 
