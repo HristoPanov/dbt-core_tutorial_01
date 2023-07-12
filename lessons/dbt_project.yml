@@ -43,11 +43,11 @@ models:
     +persist_docs:
       relation: true
       columns: true
-    +hours_to_expiration: | #168
-      {% if target.name =='testing' %} 1
-      {% elif target.name =='production' %} 1
-      {% else %} 48
-      {% endif %}
+    +hours_to_expiration: 48 # 1 hour if testing, testing production. 48 for real
+      #{% if target.name =='testing' %} 1
+      #{% elif target.name =='production' %} 1
+      #{% else %} 48
+      #{% endif %}
     intermediate:
       tags: ['my_tag',"my_other_tag"]
 
